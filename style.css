@@ -158,6 +158,126 @@ p {
     border: 0;
 }
 
-section{
-    padding: 5%;
+/*************** min CSS ****************/
+
+.primary-btn{
+    background-color: var(--purple-600);
+    color: contrast-color(var(--purple-600));
+    padding: 0.5rem;
+    padding-inline: 10%; /* stupid stuff do better*/
+    border-color: var(--purple-400);
+    border-radius: 5px;
 }
+.secondary-btn{
+    background-color:var(--white);
+    color: var(--purple-800);
+    border-color: var(--purple-800);
+    padding: 0.5rem;
+    padding-inline: 10%;
+    border-radius: 5px;
+
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & a {
+    padding: 0.5rem;
+    }
+    & a:hover{
+        color: var(--purple-800);
+    }
+    
+}
+
+/* Navbar */
+.navbar-left{
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    font-size: 1.5rem;
+    
+}
+
+.navbar-right svg{
+    color: var(--purple-800);
+  
+}
+
+
+/* utility classes */
+
+
+.bg-color-lgt-green{
+    background-color: var(--mint-200);
+}
+.prose > * + * {
+    margin-block-start: 1em;
+}
+
+/* section 1 */
+.smal-teaser{
+    background-color:var(--purple-200);
+    color: var(--purple-800);
+    padding: 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: fit-content;
+    padding-inline:5% ;
+}
+.main-heading{
+    
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 800;
+}
+
+
+/*needs work , jävla bilder */
+.image-gallery{
+    display: flex;
+    gap: 1rem;
+    
+    & img{
+        
+        border-radius: 10px;
+    }
+
+}
+
+
+/* section form */
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+form{
+    display: grid;
+    gap:5%;
+    justify-content: center;
+    align-content: center;
+    padding: 10%;
+    background-color: var(--purple-100);
+
+}
+.form-group{
+    display: grid;
+    & label{
+        font-weight: 600;
+        padding-block: 5px;
+    }
+    & input, select{
+        padding: 10px;
+        border-radius: 5px;
+        border-color: var(--gray-300);
+    
+    }
+}
+
+
+/* section cards /

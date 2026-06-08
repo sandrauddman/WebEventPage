@@ -59,7 +59,7 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <a href="#"><button>Skapa konto</button></a>
+                <a href="#"><button class="primary-btn">Skapa konto</button></a>
             </div>
         </nav>      
 
@@ -68,25 +68,29 @@
 
     <!-- Main content -->
     <main>
-        <section class="content-grid">
-            <span>Upptäck. Upplev. Minns.</span>
+        <section class="content-grid prose">
+            <span class="smal-teaser">Upptäck. Upplev. Minns.</span>
 
-            <h1>Hitta lokala evenemang du kommer älska</h1>
+            <h1 class="main-heading">Hitta lokala evenemang du kommer älska</h1>
 
             <p>Från konserter och marknader till workshops och familjeaktiviteter. Upptäck vad som händer nära dig.</p>
 
-            <a href="#"><button>Utforska evenemang</button></a>
-            <a href="#"><button>Se helgens tips</button></a>
-
-            <img src="" alt="">
-            <img src="" alt="">
+            <a href="#"><button class="primary-btn">Utforska evenemang</button></a>
+            <a href="#"><button class="secondary-btn">Se helgens tips</button></a>
+            
+            <div class="image-gallery">
+                <img src="https://picsum.photos/id/158/200/300" alt="">
+                <img src="https://picsum.photos/id/195/200/300" alt="">
+                <img src="https://picsum.photos/id/250/200/300" alt="">
+            </div>
         </section>   
         <section> 
-            <h2>Hitta rätt evenemang</h2>
+            
             <form action="submit" method="post">
+                <h2>Hitta rätt evenemang</h2>
                 <div class="form-group">
                     <label for="">Sökord</label>
-                    <input type="text">
+                    <input type="text" placeholder="Sök på t.ex. konsert, yoga ...">
                 </div>
                 <div class="form-group">
                     <label for="">Kategori</label>
@@ -101,10 +105,10 @@
                 </div>
                 <div class="form-group">
                     <label for="">Datum</label>
-                    <input type="text">
+                    <input type="date">
                 </div>
 
-                <button>Sök evenemang</button>
+                <button class="primary-btn">Sök evenemang</button>
             </form>      
         </section>
         <section>
@@ -181,7 +185,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="bg-color-lgt-green">
             <div class="card-2">
                  <!-- ticket icon -->
                 <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -251,7 +255,8 @@
                     <path
                         d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
                     </path>
-                </svg></a>
+                </svg>
+            </a>
         </header>
         <nav class="navbar-footer">
             <div class="column">
