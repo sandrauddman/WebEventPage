@@ -17,21 +17,14 @@
 <body>
     <!-- SVGs -->
 
-    <!-- hamburger icon -->
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="4" y1="12" x2="20" y2="12"></line>
-        <line x1="4" y1="6" x2="20" y2="6"></line>
-        <line x1="4" y1="18" x2="20" y2="18"></line>
-    </svg>
 
     <!-- heart icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+   <!--  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path
             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
         </path>
-    </svg>
+    </svg>-->
 
 
     <!-- Header -->
@@ -54,12 +47,18 @@
                 <a href="#">Kontakt</a>
             </ul>
             <div class="navbar-right">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                <svg class="mag-glas" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-                <a href="#"><button class="primary-btn">Skapa konto</button></a>
+                <svg class="ham" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+                <a href="#"><button class="primary-btn">Logga in</button></a>
             </div>
         </nav>      
 
@@ -68,8 +67,8 @@
 
     <!-- Main content -->
     <main>
-        <section class="content-grid prose">
-            <span class="smal-teaser">Upptäck. Upplev. Minns.</span>
+        <section class="section-1 prose">
+            <span class="pill">Upptäck. Upplev. Minns.</span>
 
             <h1 class="main-heading">Hitta lokala evenemang du kommer älska</h1>
 
@@ -112,76 +111,65 @@
             </form>      
         </section>
         <section>
-            <header>
+            <header class="cards-header">
                 <h2> Populära evenemang</h2>
                 <a href="#">Se alla evenemang</a>
             </header>
             <div class="cards">
                 <div class="card">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                    <time datetime=""></time>
-                    <p> Indie Night med Nova Sun
-                        Konsert
-                        24 maj
-                        Pustervik, Göteborg
-                    </p>
+                    <img src="https://picsum.photos/id/452/200/300" alt="">
+                    <div class="border-elems">
+                        <span class="pill">Konsert</span>
+                        <time datetime="2026-05-24">24 maj</time>
+                    </div>
+                    <h3>Indie Night med Nova Sun</h3>
+                    <p>Pustervik, Göteborg</p>
                 </div>
                  <div class="card">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                    <time datetime=""></time>
-                    <p>Vårmarknad i Slottsskogen
-                        Marknad
-                        25 maj
-                        Slottsskogen, Göteborg
-                    </p>
+                    <img src="https://picsum.photos/id/459/200/300" alt="">
+                    <div class="border-elems">
+                        <span class="pill">Marknad</span>
+                        <time datetime="2026-05-25">25 maj</time>
+                    </div>
+                    <h3>Vårmarknad i Slottsskogen</h3>
+                    <p>Slottsskogen, Göteborg</p>
                 </div>
                  <div class="card">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                    <time datetime=""></time>
-                    <p>Keramikkurs för nybörjare
-                        Workshop
-                        27 maj
-                        Studio Lera, Göteborg
-                    </p>
+                    <img src="https://picsum.photos/id/137/200/300" alt="">
+                    <div class="border-elems">
+                        <span class="pill">Workshop</span>
+                        <time datetime="2026-05-27">27 maj</time>
+                    </div>
+                    <h3>Keramikkurs för nybörjare</h3>
+                    <p>Studio Lera, Göteborg</p>
                 </div>
                  <div class="card">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                    <time datetime=""></time>
-                    <p> Barnteater: Den lilla sjöjungfrun
-                        Familj
-                        31 maj
-                        Folkteatern, Göteborg
-                    </p>
+                    <img src="https://picsum.photos/id/986/200/300" alt="">
+                    <div class="border-elems">
+                        <span class="pill">Familj</span>
+                        <time datetime="2026-05-31">31 maj</time>
+                    </div>
+                    <h3>Barnteater: Den lilla sjöjungfrun</h3>
+                    <p>Folkteatern, Göteborg</p>
                 </div>
                  <div class="card">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
+                    <img src="https://picsum.photos/id/473/200/300" alt="">
+                    <div class="border-elems">
+                        <span class="pill">Sport</span>
+                        <time datetime="2026-06-01">1 juni</time>
+                    </div>
+                    <h3>Morgonlöpning & frukost</h3>
                     <time datetime=""></time>
-                    <p>Morgonlöpning & frukost
-                        Sport
-                        1 juni
-                        Slottsskogen, Göteborg
-                    </p>
+                    <p>Slottsskogen, Göteborg</p>
                 </div>
                  <div class="card">
-                    <img src="" alt="">
-                    <span></span>
-                    <h3></h3>
-                    <time datetime=""></time>
-                    <p>Jazzkväll på Vasateatern
-                        Konsert
-                        3 juni
-                        Vasateatern, Göteborg
-                    </p>
+                    <img src="https://picsum.photos/id/836/200/300" alt="">
+                    <div class="border-elems">
+                        <span class="pill">Konsert</span>
+                        <time datetime="2026-06-03">3 juni</time>
+                    </div>
+                    <h3>Jazzkväll på Vasateatern</h3>
+                    <p>Vasateatern, Göteborg</p>
                 </div>
             </div>
         </section>

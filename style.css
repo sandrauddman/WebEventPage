@@ -68,7 +68,7 @@ ul {
 
 
 html {
-    color-scheme: dark light;
+    color-scheme:  dark light;
 }
 
 /*** Global/base styles ***/
@@ -76,6 +76,7 @@ html {
 body {
     font-family: var(--font-inter);
     color: var(--gray-900);
+    
 }
 
 h1,
@@ -91,6 +92,7 @@ h6 {
 
 p {
     text-wrap: pretty;
+    color: var(--gray-600); /*added color*/
 }
 
 
@@ -160,6 +162,8 @@ p {
 
 /*************** min CSS ****************/
 
+/* buttons */
+
 .primary-btn{
     background-color: var(--purple-600);
     color: contrast-color(var(--purple-600));
@@ -178,6 +182,17 @@ p {
 
 
 }
+/* utility classes */
+
+
+.bg-color-lgt-green{
+    background-color: var(--mint-200);
+}
+.prose > * + * {
+    margin-block-start: 1em;
+}
+
+/*  navbar */
 
 .navbar{
     display: flex;
@@ -193,14 +208,35 @@ p {
     
 }
 
-/* Navbar */
 .navbar-left{
     display: flex;
     font-weight: 700;
     align-items: center;
     font-size: 1.5rem;
+    .logotext{
+        color:black;
+        padding-bottom: 10px;
+    }
     
 }
+
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    
+
+    /* popover hover?*/
+    & .ham {
+        display:none;
+    }
+    & button{
+        min-width: 6rem;
+    }
+  
+}
+
+
 
 .navbar-right svg{
     color: var(--purple-800);
@@ -208,18 +244,41 @@ p {
 }
 
 
-/* utility classes */
+@media (width < 770px) {
+    .navbar ul{
+        display: none;
+    } 
+
+    .navbar-right{
+        gap: 10%;
+        
+    }
+
+    .navbar-right button{
+        display:none;
+    }
+
+    .navbar-right .ham{
+        display: inline;
+    }
 
 
-.bg-color-lgt-green{
-    background-color: var(--mint-200);
+    
 }
-.prose > * + * {
-    margin-block-start: 1em;
-}
+
+
+
+
 
 /* section 1 */
-.smal-teaser{
+
+.section-1{
+    padding: 2rem;
+    display: grid;
+
+}
+
+.pill{
     background-color:var(--purple-200);
     color: var(--purple-800);
     padding: 0.2rem;
@@ -228,6 +287,10 @@ p {
     max-width: fit-content;
     padding-inline:5% ;
 }
+
+
+
+
 .main-heading{
     
     font-size: 3rem;
@@ -238,7 +301,7 @@ p {
 
 /*needs work , jävla bilder */
 .image-gallery{
-    display: flex;
+    display: grid;
     gap: 1rem;
     
     & img{
@@ -249,7 +312,7 @@ p {
 }
 
 
-/* section form */
+/* section 2 form */
 
 h2 {
     font-size: 2rem;
@@ -280,4 +343,41 @@ form{
 }
 
 
-/* section cards /
+/* section 3 cards */
+
+.cards-header{
+    display: flex;
+    justify-content: space-between;
+
+    & a{
+        color: var(--purple-800);
+        
+    }
+     & a:hover{
+        color: var(--purple-600);
+    }
+
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30ch,1fr));
+    gap: 1rem;
+    outline: solid 7px firebrick;
+}
+
+.card{
+    display: grid;
+
+    border-radius: 10px;
+    border: solid 3px var(--blue-100);
+
+    & img{
+        width: 100%;
+        max-height:  200px;
+        object-fit: cover;
+        object-position: bottom;
+        border-start-end-radius: 10px;
+        border-start-start-radius: 10px;
+    }
+}
