@@ -182,6 +182,26 @@ p {
 
 
 }
+
+
+/*reusable items*/
+
+h3{
+        font-size: larger;
+        font-weight: 700;
+    }
+
+.pill{
+    background-color:var(--purple-200);
+    color: var(--purple-800);
+    padding: 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    max-width: fit-content;
+    padding-inline:5% ;
+}
+
+
 /* utility classes */
 
 
@@ -192,6 +212,7 @@ p {
     margin-block-start: 1em;
 }
 
+ 
 /*  navbar */
 
 .navbar{
@@ -208,7 +229,7 @@ p {
     
 }
 
-.navbar-left{
+.logo{
     display: flex;
     font-weight: 700;
     align-items: center;
@@ -226,7 +247,7 @@ p {
     align-items: center;
     
 
-    /* popover hover?*/
+    
     & .ham {
         display:none;
     }
@@ -275,25 +296,14 @@ p {
 .section-1{
     padding: 2rem;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 
 }
-
-.pill{
-    background-color:var(--purple-200);
-    color: var(--purple-800);
-    padding: 0.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    max-width: fit-content;
-    padding-inline:5% ;
-}
-
-
 
 
 .main-heading{
     
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1;
     font-weight: 800;
 }
@@ -302,20 +312,22 @@ p {
 /*needs work , jävla bilder */
 .image-gallery{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     
     & img{
-        
         border-radius: 10px;
     }
 
 }
 
 
+
+
 /* section 2 form */
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
@@ -324,7 +336,7 @@ form{
     gap:5%;
     justify-content: center;
     align-content: center;
-    padding: 10%;
+    padding: 15%;
     background-color: var(--purple-100);
 
 }
@@ -346,11 +358,14 @@ form{
 /* section 3 cards */
 
 .cards-header{
-    display: flex;
+    display: flex; /*grid?**/
     justify-content: space-between;
+    padding: 1rem;
+    
 
     & a{
         color: var(--purple-800);
+        justify-self: stretch;
         
     }
      & a:hover{
@@ -361,23 +376,110 @@ form{
 
 .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30ch,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr));
     gap: 1rem;
-    outline: solid 7px firebrick;
+    /*outline: solid 7px firebrick;*/
 }
 
 .card{
     display: grid;
-
+    gap: .2rem;
     border-radius: 10px;
-    border: solid 3px var(--blue-100);
+    border: solid 1px var(--blue-100);
 
     & img{
-        width: 100%;
-        max-height:  200px;
         object-fit: cover;
-        object-position: bottom;
         border-start-end-radius: 10px;
         border-start-start-radius: 10px;
     }
+   
+
+    .border-elems>*{
+        display: block;
+        
+    }
+    .border-elems{
+        display: flex;
+        justify-content:space-between;
+    }
+    
 }
+.card-content{
+    padding: 1rem;
+
+}
+.card-content > *{
+    padding-block: 0.6rem;
+}
+
+
+
+/* section 4 green bg*/
+
+
+.section-4{
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    padding:2rem;
+}
+
+.card-2{
+    display: grid ;
+    justify-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+/* footer */
+
+
+footer{
+    background-color: var(--gray-900);
+    color: var(--gray-300);
+    padding-block: 10%;
+    padding-inline: 5%;
+}
+footer p{
+    color: var(--gray-300);
+    margin-bottom: 1rem;
+}
+.footer-icon{
+    padding:5%;
+    margin-bottom: 1rem;
+}
+
+.logo-footer{
+    color: var(--white);
+    .logotext{
+        color: var(--white);
+    }
+}
+
+h4{
+    color: var(--gray-300);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer-navbar{
+    display: grid;
+    gap: 5rem;
+   
+    grid-template-columns: repeat(auto-fit, minmax(min(10ch, 100%), 1fr));
+
+}
+.footer-column{
+    display: grid;
+    color: var(--gray-400);
+    gap: .5rem;
+    padding: 5%;
+    
+}
+.footer-column p{
+    color: var(--gray-400);
+}
+
+
+
+
