@@ -164,32 +164,6 @@ p {
 
 /*************** min CSS ****************/
 
-/* buttons */
-
-.primary-btn{
-    background-color: var(--purple-600);
-    color: contrast-color(var(--purple-600));
-    padding: 0.5rem;
-    padding-inline: 2rem; 
-    border-color: var(--purple-400);
-    border-radius: 5px;
-    
-   
-
-} 
-.secondary-btn{
-    background-color:var(--white);
-    color: var(--purple-800);
-    border-color: var(--purple-800);
-    padding: 0.5rem;
-    padding-inline: 10%;
-    border-radius: 5px;
-   
-
-
-}
-
-
 /*reusable items*/
 section{
     padding: 2rem;
@@ -208,6 +182,27 @@ h3{
     max-width: fit-content;
     padding-inline:5% ;
 }
+
+
+/* buttons */
+
+.primary-btn{
+    background-color: var(--purple-600);
+    color: contrast-color(var(--purple-600));
+    padding: 0.5rem;
+    padding-inline: 2rem; 
+    border-color: var(--purple-400);
+    border-radius: 5px;
+} 
+.secondary-btn{
+    background-color:var(--white);
+    color: var(--purple-800);
+    border-color: var(--purple-800);
+    padding: 0.5rem;
+    padding-inline: 10%;
+    border-radius: 5px;
+}
+
 
 
 /* utility classes */
@@ -252,7 +247,6 @@ h3{
     
 }
 
-
 .navbar-right{
     display: flex;
     align-items: center;
@@ -263,42 +257,27 @@ h3{
     & button{
         min-width: 6rem;
     }
-  
 }
-
-
 
 .navbar-right svg{
     color: var(--purple-800);
-  
 }
 
 
-@media (width < 770px) {
+@media (width < 676px) {
     .navbar ul{
         display: none;
     } 
-
     .navbar-right{
-        gap: 10%;
-        
+        gap: 10%;  
     }
-
     .navbar-right button{
         display:none;
     }
-
     .navbar-right .ham{
         display: inline;
     }
-
-
-    
 }
-
-
-
-
 
 /* section 1 */
 
@@ -317,6 +296,10 @@ h3{
     font-weight: 800;
 }
 
+.section-1-content p{
+    max-width: 30ch;
+}
+
 
 .buttons{
     display: flex;
@@ -324,41 +307,46 @@ h3{
     gap: 1rem ;    
 }
 
+
+/**** pixels ***/
 .buttons a{
      flex-basis: 250px;
 
 }
 
-
-/*needs work , jävla bilder */
 .image-gallery{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 1rem;
+    gap: 0.5rem;
     margin-block: 1rem;
     
-    & img{
-        border-radius: 10px;
-    }
-
-    & img:first-child{
-        grid-row: span 2;
-    }
-
-}
-
-
-
-@media (width > 800px)  {
-
-    .image-gallery{
-        outline: solid 5px firebrick; 
-        grid-template-columns: 1fr 1fr;
-        grid-row: span 2;
-    }
 
     
+    & img{
+        
+        border-radius: 10px;    
+    }
+}
+
+@media (width > 670px){
+
+    .image-gallery{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        
+        img{
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+            grid-column: span 2;
+
+            &:first-child{
+                grid-row: span 2;
+                grid-column: span 3;
+            }
+        }
+    } 
 }
 
 
@@ -387,26 +375,23 @@ form{
 
     & label{
         font-weight: 600;
-        padding-block: 5px;
+        padding-block: 5px; /** change*/
     }
     & input, select{
-        padding: 10px;
-        border-radius: 5px;
+        padding: 10px;  /** change*/
+        border-radius: 5px; /** change*/
         border-color: var(--gray-300);
     
     }
 }
 
-
-
 /* section 3 cards */
 
 .cards-header{
-    display: flex; /*grid?**/
+    display: flex; 
     justify-content: space-between;
     padding-block: 1rem;
     
-
     & a{
         color: var(--purple-800);
         justify-self: stretch;
@@ -423,7 +408,7 @@ form{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(250px,100%),1fr));
     gap: 1rem;
-    /*outline: solid 7px firebrick;*/
+   
 }
 
 .card{
@@ -480,7 +465,6 @@ form{
     justify-content: center;
     max-width:30ch ;
 
-
     & svg{
 
         border-radius: 100%;
@@ -504,7 +488,6 @@ footer{
     color: var(--gray-300);
     padding-inline:2rem;
     padding-block: 5%;
-    
 
     & header{
         max-width: 30ch;
