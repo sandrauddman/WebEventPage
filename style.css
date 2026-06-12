@@ -76,6 +76,8 @@ html {
 body {
     font-family: var(--font-inter);
     color: var(--gray-900);
+    margin-inline: auto;
+    max-inline-size: 900px;
     
 }
 
@@ -168,10 +170,13 @@ p {
     background-color: var(--purple-600);
     color: contrast-color(var(--purple-600));
     padding: 0.5rem;
-    padding-inline: 10%; /* stupid stuff do better*/
+    padding-inline: 2rem; 
     border-color: var(--purple-400);
     border-radius: 5px;
-}
+    
+   
+
+} 
 .secondary-btn{
     background-color:var(--white);
     color: var(--purple-800);
@@ -179,13 +184,16 @@ p {
     padding: 0.5rem;
     padding-inline: 10%;
     border-radius: 5px;
+   
 
 
 }
 
 
 /*reusable items*/
-
+section{
+    padding: 2rem;
+}
 h3{
         font-size: larger;
         font-weight: 700;
@@ -204,6 +212,9 @@ h3{
 
 /* utility classes */
 
+.bg-color-lgt-blue{
+    background-color: var(--purple-100);
+}
 
 .bg-color-lgt-green{
     background-color: var(--mint-200);
@@ -245,8 +256,6 @@ h3{
 .navbar-right{
     display: flex;
     align-items: center;
-    
-
     
     & .ham {
         display:none;
@@ -309,22 +318,43 @@ h3{
 }
 
 
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem ;    
+}
+
+.buttons a{
+     flex-basis: 250px;
+
+}
+
+
 /*needs work , jävla bilder */
 .image-gallery{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    margin-block: 1rem;
     
     & img{
         border-radius: 10px;
     }
 
 }
+@media (width > 800px)  {
+
+    .image-gallery{
+        outline: solid 5px firebrick; 
+        grid-template-columns: 1fr 1fr;
+        grid-row: span 2;
+    }
+
+    
+}
 
 
-
-
-/* section 2 form */
+/* section 2 form  still not getting button to go all the way to the left*/
 
 h2 {
     font-size: 1.4rem;
@@ -332,16 +362,21 @@ h2 {
 }
 
 form{
-    display: grid;
-    gap:5%;
-    justify-content: center;
-    align-content: center;
-    padding: 15%;
-    background-color: var(--purple-100);
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    
+    & button{
+    max-height: fit-content;
+    align-self: flex-end;   
+    
+}
+   
 
 }
 .form-group{
     display: grid;
+
     & label{
         font-weight: 600;
         padding-block: 5px;
@@ -355,17 +390,19 @@ form{
 }
 
 
+
 /* section 3 cards */
 
 .cards-header{
     display: flex; /*grid?**/
     justify-content: space-between;
-    padding: 1rem;
+    padding-block: 1rem;
     
 
     & a{
         color: var(--purple-800);
         justify-self: stretch;
+        font-size: 1rem;
         
     }
      & a:hover{
@@ -376,7 +413,7 @@ form{
 
 .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px,100%),1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px,100%),1fr));
     gap: 1rem;
     /*outline: solid 7px firebrick;*/
 }
@@ -418,17 +455,26 @@ form{
 
 
 .section-4{
-    display: grid;
+    display: flex;
     gap: 2rem;
     justify-items: center;
     padding:2rem;
 }
 
 .card-2{
-    display: grid ;
-    justify-items: center;
+    display: flex ;
+    flex-wrap: wrap;
     gap: 1rem;
     text-align: center;
+    justify-content: center;
+
+
+    & svg{
+    }
+}
+
+.card-2-content{
+    padding-inline: 1rem;
 }
 
 /* footer */

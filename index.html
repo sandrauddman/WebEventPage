@@ -72,8 +72,10 @@
                 <span class="pill">Upptäck. Upplev. Minns.</span>
                 <h1 class="main-heading">Hitta lokala evenemang du kommer älska</h1>
                 <p>Från konserter och marknader till workshops och familjeaktiviteter. Upptäck vad som händer nära dig.</p>
-                <a href="#"><button class="primary-btn">Utforska evenemang</button></a>
-                <a href="#"><button class="secondary-btn">Se helgens tips</button></a>
+                <div class="buttons">
+                    <a href="#"><button class="primary-btn">Utforska evenemang</button></a>
+                    <a href="#"><button class="secondary-btn">Se helgens tips</button></a>
+                </div>
             </div>
             <div class="image-gallery">
                 <img src="https://picsum.photos/id/158/200/" alt="">
@@ -81,10 +83,10 @@
                 <img src="https://picsum.photos/id/250/200/" alt="">
             </div>
         </section>   
-        <section> 
-            
-            <form action="submit" method="post">
+        <section class="prose bg-color-lgt-blue"> 
                 <h2>Hitta rätt evenemang</h2>
+            <form action="submit" method="post">
+                
                 <div class="form-group">
                     <label for="">Sökord</label>
                     <input type="text" placeholder="Sök på t.ex. konsert, yoga ...">
@@ -104,14 +106,14 @@
                     <label for="">Datum</label>
                     <input type="date">
                 </div>
-
+                
                 <button class="primary-btn">Sök evenemang</button>
             </form>      
         </section>
         <section>
             <header class="cards-header">
                 <h2> Populära evenemang</h2>
-                <a href="#">Se alla evenemang</a>
+                <a href="#">Se alla evenemang &#8594;</a>
             </header>
             <div class="cards">
                 <div class="card">
@@ -193,10 +195,12 @@
                     </path>
                     <line x1="9" y1="5" x2="9" y2="19"></line>
                 </svg>
-                <h3>Gratis & prisvärt</h3>
-                <p>Hitta massor av evenemang som är gratis eller snälla mot plånboken.</p>
+                <div class="card-2-content">
+                    <h3>Gratis & prisvärt</h3>
+                    <p>Hitta massor av evenemang som är gratis eller snälla mot plånboken.</p>
+                </div>
             </div>
-            <div class="card-2">
+            <div class="card-2 prose">
                  <!-- people icon -->
                     <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -205,8 +209,10 @@
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
-                <h3>För alla åldrar</h3>
-                <p>Aktiviteter för både stora och små - hitta något som passar hela familjen.</p>
+                <div class="card-2-content prose">
+                    <h3>För alla åldrar</h3>
+                    <p>Aktiviteter för både stora och små - hitta något som passar hela familjen.</p>
+                </div>
             </div>
             <div class="card-2">
                 <!-- location icon -->
@@ -215,8 +221,10 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                     <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                <h3>Nära dig</h3>
-                <p>Upptäck evenemang i ditt område och stöd lokala arrangörer.</p>
+                <div class="card-2-content prose">
+                    <h3>Nära dig</h3>
+                    <p>Upptäck evenemang i ditt område och stöd lokala arrangörer.</p>
+                </div>
             </div>
         </section>        
     </main>
